@@ -11,13 +11,15 @@ jobs:
 
   test:
     needs: lint
-    runs_on: ubuntu_latest 
+    runs_on: ubuntu_latest
+    steps: 
       - name: Testing
         run: echo "test"
 
   build:
     needs: test
     runs_on: ubuntu_latest
+    steps:
       - name: Build
         run: echo "build"
 
