@@ -1,1 +1,23 @@
-abdefc
+name: First assessment
+
+on: push
+
+jobs:
+  lint:
+    runs_on: ubuntu_latest
+    steps:
+      - name: Linting
+        run: echo "lint"
+
+  test:
+    needs: lint
+    runs_on: ubuntu_latest 
+      - name: Testing
+        run: echo "test"
+
+  build:
+    needs: test
+    runs_on: ubuntu_latest
+      - name: Build
+        run: echo "build"
+
