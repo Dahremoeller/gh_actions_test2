@@ -1,0 +1,10 @@
+name: Meta Information
+
+on: workflow_dispatch
+
+jobs:
+  info:
+    runs-on: ubuntu_latest
+    steps:
+      - name: GH context
+        run: echo "${{ toJSON(github) }}"
